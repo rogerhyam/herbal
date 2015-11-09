@@ -16,11 +16,19 @@
 ?>
 <h2>Parsing RDF</h2>
 
+<h3>CETAF Specimen Preview Profile</h3>
+<p>This is a tentative list.</p>
 
 <?php
-    
-    echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/title>');
-    echo '<hr/>';
 
-    var_dump($doc);
+    // GOT TO HERE -- add table of CETAF fields..
+
+    echo "<strong>dc:title</strong> ";
+    echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/title>');
+    //var_dump($doc);
+?>
+
+<h3>Complete RDF Graph</h3>
+<?php
+    echo $doc->dump('html');
 ?>
