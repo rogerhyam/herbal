@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * Sets up a curl handle with any common params in it
+ */
+function get_curl_handle($uri){
+    $ch = curl_init($uri);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Herbal URI Tester');
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    return $ch;
+}
+
+/**
+ * Run the cURL requests in one place 
+ * so we can catch errors etc
+ */
+function run_curl_request($curl){
+   
+   $out['response'] = curl_exec($curl);
+   $out['error'] = curl_errno($curl);
+   
+    if(!$out['error']){
+        // no error
+        $out['headers'] = get_headers_from_curl_response($out['response']);
+        $out['info'] = curl_getinfo($curl);
+    }else{
+        // we are in error
+        $out['error_message'] = curl_error($curl);
+    }
+    
+    // we close it down after it has been run
+    curl_close($curl);
+    
+    return (object)$out;
+    
+}
+
+/**
+ * cURL returns headers as sting so we need to chop them into
+ * a useable array - even though the info is in the 
+ */
+function get_headers_from_curl_response($response){
+    $headers = array();
+
+    $header_text = substr($response, 0, strpos($response, "\r\n\r\n"));
+
+    foreach (explode("\r\n", $header_text) as $i => $line)
+        if ($i === 0)
+            $headers['http_code'] = $line;
+        else
+        {
+            list ($key, $value) = explode(': ', $line);
+
+            $headers[$key] = $value;
+        }
+
+    return $headers;
+}
+
+function echo_error($message){
+    echo_message($message, 'herbal-error');
+}
+
+function echo_warning($message){
+    echo_message($message, 'herbal-warning');
+}
+
+function echo_ok($message){
+    echo_message($message, 'herbal-ok');
+}
+
+function echo_info($message){
+    echo_message($message, 'herbal-info');
+}
+
+function echo_message($message, $class){
+    echo '<div class="'. $class .'">';
+    echo $message;
+    echo '</div>';
+}
+
+
+
+?>
