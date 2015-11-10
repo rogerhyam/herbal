@@ -21,6 +21,9 @@
     <div id="request-rdf-results"  class="herbal-results" >Loading ... </div>
     <div id="parse-rdf-results"    class="herbal-results" >Loading ... </div>
     
+    <hr/>
+    <a href="http://tdwg.github.io/dwc/terms/guides/rdf/index.htm">TDWG guide to construction of RDF for Darwin Core.</a>
+    
   </body>
     
   

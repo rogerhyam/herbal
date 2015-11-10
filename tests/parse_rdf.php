@@ -25,10 +25,14 @@
 
     echo "<strong>dc:title</strong> ";
     echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/title>');
+    echo '<hr/>';
+    echo "<strong>test</strong> ";
+    echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/relation>/dc:description');
+    
     //var_dump($doc);
 ?>
 
 <h3>Complete RDF Graph</h3>
 <?php
     echo $doc->dump('html');
-?>
+?> 
