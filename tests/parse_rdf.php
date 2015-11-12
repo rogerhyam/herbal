@@ -1,36 +1,72 @@
 <?php
     require_once('common.php');
     require_once('../vendor/autoload.php');
+    require_once('../cpss.php');
     
     $specimen_uri = $_GET['specimen_uri'];
     $doc = new EasyRdf_Graph($_GET['rdf_uri']);
     $doc->load();
     
-    /*
-  $foaf = 
-  $foaf->load();
-  $me = $foaf->primaryTopic();
-  echo "My name is: ".$me->get('foaf:name')."\n"; 
-*/
-    
 ?>
 <h2>Parsing RDF</h2>
 
 <h3>CETAF Specimen Preview Profile</h3>
-<p>This is a tentative list.</p>
+<p>Prefered URI's a listed first followed by depricated URIs.</p>
 
+<table>
+    <tr>
+        <th>CPSS Element</th>
+        <th>Mandatory</th>
+        <th>RDF resource URI</th>
+        <th>Value</th>
+    </tr>    
 <?php
-
-    // GOT TO HERE -- add table of CETAF fields..
-
-    echo "<strong>dc:title</strong> ";
-    echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/title>');
-    echo '<hr/>';
-    echo "<strong>test</strong> ";
-    echo $doc->get($specimen_uri, '<http://purl.org/dc/terms/relation>/dc:description');
     
-    //var_dump($doc);
+    foreach($cpss as $prop){
+        
+        echo '<tr>';
+        echo '<td>' . $prop->display_name . '</td>';
+        echo '<td>' . ($prop->required ? 'Yes':'No') . '</td>';
+
+        // work out which uri we will use
+        echo '<td>';
+        $is_first = true;
+        foreach($prop->qnames as $uri){
+            
+            if($is_first) $prefered_class = "herbal-prefered-uri";
+            else $prefered_class = "herbal-not-prefered-uri";
+            
+            $val = $doc->get($specimen_uri, '<' . $uri . '>');
+            if($val){
+                echo '<span class="herbal-used-uri '. $prefered_class .'">' . $uri . "</span><br/>";
+                break;
+            }else{
+                echo '<span class="herbal-not-used-uri '. $prefered_class .'" >' . $uri . "</span><br/>";
+                $is_first = false;
+                continue;
+            }
+            
+        }
+        echo '</td>';
+        
+        // write out the value
+        
+        if($is_first) $val_class = "herbal-value-by-prefered";
+        else $val_class = "herbal-value-not-by-prefered";
+        if($val){
+            echo '<td class="'. $val_class .'" >'. $val . '</td>';
+        }else{
+            echo '<td class="herbal-value-not-found" >NOT FOUND</td>';
+        }
+        
+        
+        echo '</tr>';
+    }
+    
 ?>
+</table>
+
+
 
 <h3>Complete RDF Graph</h3>
 <?php

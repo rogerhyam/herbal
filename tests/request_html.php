@@ -11,6 +11,7 @@
     
     // set other things here
     curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: text/html"));
+    echo_info("Requesting HTML by passing 'Accept: text/html' header.");
     $response = run_curl_request($curl);
     
     // we either got a 303 redirect or we got a 200 or something else!

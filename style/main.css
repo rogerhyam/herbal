@@ -1,0 +1,58 @@
+body{
+    padding: 1em;
+}
+
+iframe{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    margin-bottom: 0px;
+}
+
+table{
+    width: 100%;
+}
+
+table th{
+    text-align: left;
+    color: white;
+    background-color: black;
+    padding: 0.5em;
+}
+
+table td{
+    padding: 0.5em;
+    border-bottom: 1px gray solid;
+}
+
+.herbal-results{
+    display:none;
+}
+
+/* highlight which uri was used */
+.herbal-used-uri.herbal-not-prefered-uri{
+    font-weight: bold;
+    color: orange;
+}
+
+.herbal-used-uri.herbal-prefered-uri{
+    font-weight: bold;
+    color: green;
+}
+
+.herbal-value-by-prefered{
+    color: green;
+}
+
+.herbal-value-not-by-prefered{
+    color: orange;
+}
+
+
+.herbal-value-not-found{
+    color: red;
+}
+

@@ -7,7 +7,7 @@ $( document ).ready(function() {
        $('.herbal-results').empty();
        
        // what are they testing
-       var uri = $('#check-uri-input').val();
+       var uri = $('#check-uri-input').val().trim();
        console.log(uri);
        
        // load the first test - others will cascade.

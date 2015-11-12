@@ -12,7 +12,7 @@
     // set other things here
     curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml"));
     $response = run_curl_request($curl);
-    echo_info("Requesting RDF by using 'Accept: application/rdf+xml'");
+    echo_info("Requesting RDF by passing 'Accept: application/rdf+xml' header.");
     if($response->info['http_code'] != 303){
         echo_error("Unexpected response code: '". $response->info['http_code'] ."'. Expecting 303 Redirect to RDF.");
     }else{
@@ -29,7 +29,5 @@
 <?php
 
     } // end got 303 uri
-    
-//    var_dump($response);
     
 ?>

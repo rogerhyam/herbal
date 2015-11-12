@@ -28,7 +28,6 @@ $cpss[] = (object)array(
         'display_name' => 'title',
         'required' => true,
         'qnames' => array(
-            'http://schema.org/name',
             'http://purl.org/dc/terms/title'
         )
     );
@@ -45,7 +44,7 @@ $cpss[] = (object)array(
 
 // scientific name (current)
 $cpss[] = (object)array(
-        'display_name' => 'Scientific Name',
+        'display_name' => 'Scientific Name (current)',
         'required' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/scientificName',
@@ -68,7 +67,8 @@ $cpss[] = (object)array(
         'display_name' => 'Original Scientific Name',
         'required' => false,
         'qnames' => array(
-            'http://rs.tdwg.org/dwc/terms/originalNameUsage'
+            'http://rs.tdwg.org/dwc/terms/originalNameUsage',
+            'http://rs.tdwg.org/dwc/terms/previousIdentifications'
         )
     );
 
@@ -77,7 +77,6 @@ $cpss[] = (object)array(
         'display_name' => 'Collector Name (recordedBy)',
         'required' => false,
         'qnames' => array(
-            'http://schema.org/creator',
             'http://rs.tdwg.org/dwc/terms/recordedBy',
             'http://rs.tdwg.org/dwc/terms/Collector'
         )
@@ -98,20 +97,17 @@ $cpss[] = (object)array(
         'display_name' => 'Collection Date (eventDate)',
         'required' => false,
         'qnames' => array(
-            'https://schema.org/dateCreated',
+            'http://purl.org/dc/terms/created',
             'http://rs.tdwg.org/dwc/terms/eventDate',
             'http://rs.tdwg.org/dwc/terms/EarliestDateCollected'
          )
     );
-
-
 
 // geo coordinates (lon/lat; WGS84)
 $cpss[] = (object)array(
         'display_name' => 'Decimal Longitude (WGS84)',
         'required' => false,
         'qnames' => array(
-            array('http://schema.org/locationCreated', 'http://schema.org/geo', 'http://schema.org/longitude'),
             'http://rs.tdwg.org/dwc/terms/decimalLongitude',
             'http://rs.tdwg.org/dwc/terms/DecimalLongitude'
          )
@@ -121,14 +117,10 @@ $cpss[] = (object)array(
         'display_name' => 'Decimal Latitude (WGS84)',
         'required' => false,
         'qnames' => array(
-            array('http://schema.org/locationCreated', 'http://schema.org/geo', 'http://schema.org/latitude'),
             'http://rs.tdwg.org/dwc/terms/decimalLatitude',
             'http://rs.tdwg.org/dwc/terms/DecimalLatitude'
          )
     );
-
-
-
 
 // iso country
 $cpss[] = (object)array(
@@ -136,7 +128,6 @@ $cpss[] = (object)array(
         'required' => false,
         'note' => 'Client may ignore if not two upper case letters or may display anyway',
         'qnames' => array(
-            array('http://schema.org/locationCreated', 'http://schema.org/geo', 'http://schema.org/addressCountry'),
             'http://rs.tdwg.org/dwc/terms/countryCode',
             'http://rs.tdwg.org/dwc/terms/country',
             'http://rs.tdwg.org/dwc/terms/Country'
@@ -149,18 +140,8 @@ $cpss[] = (object)array(
         'required' => false,
         'note' => 'Expects a URL to the hosting institutions home page not embedded object.',
         'qnames' => array(
-            array('http://schema.org/publisher', 'http://schema.org/url'),
+            'http://purl.org/dc/elements/1.1/publisher',
             'http://rs.tdwg.org/dwc/terms/InstitutionCode'
-         )
-    );
-    
-// Institution Logo 
-$cpss[] = (object)array(
-        'display_name' => 'Institution Logo',
-        'required' => false,
-        'note' => 'Expects a URL to logo of institution.',
-        'qnames' => array(
-            array('http://schema.org/publisher', 'http://schema.org/logo')
          )
     );
     
@@ -170,7 +151,6 @@ $cpss[] = (object)array(
         'required' => false,
         'note' => 'Expects URL to file. Max 1,000x1,000 px. JPEG, PNG, GIF',
         'qnames' => array(
-            'http://schema.org/image', // used on over 1,000,000 domains
             'http://rs.tdwg.org/dwc/terms/associatedMedia'
          )
     );
