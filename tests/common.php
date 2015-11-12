@@ -78,7 +78,8 @@ function echo_info($message){
 }
 
 function echo_message($message, $class){
-    echo '<div class="'. $class .'">';
+    echo '<div class="herbal-message '. $class .'">';
+    echo '<span class="herbal-message-icon">&nbsp;</span>';
     echo $message;
     echo '</div>';
 }

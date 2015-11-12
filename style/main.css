@@ -56,3 +56,22 @@ table td{
     color: red;
 }
 
+.herbal-ok .herbal-message-icon:before{
+    content: "\2714";
+    color: green;
+}
+
+.herbal-info .herbal-message-icon:before{
+    content: "\2139";
+    color: black;
+}
+
+.herbal-warning .herbal-message-icon:before{
+    content: "\26a0";
+    color: orange;
+}
+
+.herbal-error .herbal-message-icon:before{
+    content: "\2717";
+    color: red;
+}
