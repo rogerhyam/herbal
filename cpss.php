@@ -27,6 +27,7 @@ $cpss = array();
 $cpss[] = (object)array(
         'display_name' => 'title',
         'required' => true,
+        'resource_expected' => false,
         'qnames' => array(
             'http://purl.org/dc/terms/title'
         )
@@ -36,6 +37,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Kind of Material',
         'required' => false,
+        'resource_expected' => true,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/basisOfRecord',
             'http://rs.tdwg.org/dwc/terms/BasisOfRecord'
@@ -46,6 +48,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Scientific Name (current)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/scientificName',
             'http://rs.tdwg.org/dwc/terms/ScientificName'
@@ -56,6 +59,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Family',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/family',
             'http://rs.tdwg.org/dwc/terms/Family'
@@ -66,6 +70,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Original Scientific Name',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/originalNameUsage',
             'http://rs.tdwg.org/dwc/terms/previousIdentifications'
@@ -76,6 +81,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Collector Name (recordedBy)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/recordedBy',
             'http://rs.tdwg.org/dwc/terms/Collector'
@@ -86,6 +92,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Collector Number (recordNumber)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/recordNumber',
             'http://rs.tdwg.org/dwc/terms/CollectorNumber'
@@ -96,6 +103,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Collection Date (eventDate)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://purl.org/dc/terms/created',
             'http://rs.tdwg.org/dwc/terms/eventDate',
@@ -107,6 +115,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Decimal Longitude (WGS84)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/decimalLongitude',
             'http://rs.tdwg.org/dwc/terms/DecimalLongitude'
@@ -116,6 +125,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Decimal Latitude (WGS84)',
         'required' => false,
+        'resource_expected' => false,
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/decimalLatitude',
             'http://rs.tdwg.org/dwc/terms/DecimalLatitude'
@@ -126,6 +136,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => '2 Letter ISO Country code',
         'required' => false,
+        'resource_expected' => false,
         'note' => 'Client may ignore if not two upper case letters or may display anyway',
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/countryCode',
@@ -138,9 +149,10 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Source Link',
         'required' => false,
+        'resource_expected' => true,
         'note' => 'Expects a URL to the hosting institutions home page not embedded object.',
         'qnames' => array(
-            'http://purl.org/dc/elements/1.1/publisher',
+            'http://purl.org/dc/terms/publisher',
             'http://rs.tdwg.org/dwc/terms/InstitutionCode'
          )
     );
@@ -149,6 +161,7 @@ $cpss[] = (object)array(
 $cpss[] = (object)array(
         'display_name' => 'Image of specimen',
         'required' => false,
+        'resource_expected' => true,
         'note' => 'Expects URL to file. Max 1,000x1,000 px. JPEG, PNG, GIF',
         'qnames' => array(
             'http://rs.tdwg.org/dwc/terms/associatedMedia'

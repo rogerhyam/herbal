@@ -3,7 +3,6 @@
 This is a simple system for testing CETAF specimen URIs.
 
 
-
 Developer Notes
 ===============
 

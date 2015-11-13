@@ -1,5 +1,6 @@
 body{
     padding: 1em;
+    font-family: arial, helvetica, clean, sans-serif;
 }
 
 iframe{
@@ -43,7 +44,9 @@ table td{
     color: green;
 }
 
-.herbal-value-by-prefered{
+.herbal-value-by-prefered,
+.herbal-value-by-prefered a
+{
     color: green;
 }
 
@@ -73,5 +76,13 @@ table td{
 
 .herbal-error .herbal-message-icon:before{
     content: "\2717";
+    color: red;
+}
+
+.herbal-right-kind-of-object{
+    color: green;
+}
+
+.herbal-wrong-kind-of-object{
     color: red;
 }

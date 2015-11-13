@@ -23,7 +23,7 @@
         $iFrameUri =  $response->info['redirect_url'];
         $requestRdf = true;
     }elseif($response->info['http_code'] == 200){
-        echo_ok("Recieved 200 Redirect HTTP code.");
+        echo_ok("Recieved 200 OK HTTP code.");
         $iFrameUri = $uri;
     }elseif($response->info['http_code'] == 404){
         echo_error("Got HTTP response code of 404 Not Found.");
@@ -39,7 +39,9 @@
         echo_error("Errors prevent retrieval of HTML.");
     }
 
-    if($requestRdf){
+    if(!$requestRdf){
+        echo_info("No 303 redirect so stopping here.");
+    }else{
         echo_info("Had 303 redirect when asking for HTML so will request RDF format.");
 ?>
 <script type="text/javascript">
