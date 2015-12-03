@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9978a990fd1c72e790fa2fde19c62f47",
-    "content-hash": "3354d1a4f4ccabc9035d8b91c88b7d28",
+    "hash": "a00518b7912e3afd698bf22f01fab5cf",
+    "content-hash": "3764e37f95bfb13a1b135a1e28110e4d",
     "packages": [
         {
             "name": "easyrdf/easyrdf",
@@ -68,6 +68,45 @@
                 "sparql"
             ],
             "time": "2015-02-27 09:45:49"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-10-04 16:44:32"
         }
     ],
     "packages-dev": [],

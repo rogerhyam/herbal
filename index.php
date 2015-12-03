@@ -1,16 +1,7 @@
-<?php
+<?php include_once('inc/header.php'); ?>
 
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Herbal URI Tester</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css" />
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </head>
-  <body>
     <h1>Herbal: CETAF Specimen URI Tester</h1>
+    
     <p>Enter a URI in the box below and click 'Check Now'.</p>
     
     <form>
@@ -26,7 +17,4 @@
     <hr/>
     <a href="http://tdwg.github.io/dwc/terms/guides/rdf/index.htm">TDWG guide to construction of RDF for Darwin Core.</a>
     
-  </body>
-    
-  
-</html>
+<?php include_once('inc/footer.php'); ?>

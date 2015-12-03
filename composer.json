@@ -1,5 +1,6 @@
 {
     "require": {
-        "easyrdf/easyrdf": "*"
+        "easyrdf/easyrdf": "*",
+        "erusev/parsedown": "*"
     }
 }

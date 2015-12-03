@@ -1,8 +1,7 @@
 <?php
     require_once('common.php');
-    require_once('../vendor/autoload.php');
     require_once('../cpss.php');
-    
+    require_once('../vendor/autoload.php');
     $specimen_uri = $_GET['specimen_uri'];
     $doc = new EasyRdf_Graph($_GET['rdf_uri']);
     $doc->load();

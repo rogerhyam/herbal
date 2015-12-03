@@ -1,0 +1,3 @@
+# Contact
+
+This is the contact page where I say how to...
