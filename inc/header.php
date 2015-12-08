@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 <?php
+    header('Content-Type: text/html; charset=utf-8');
     require_once('vendor/autoload.php');
 ?>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Herbal URI Tester</title>
