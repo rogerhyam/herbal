@@ -39,6 +39,7 @@ $cpss[] = (object)array(
         'required' => false,
         'resource_expected' => true,
         'qnames' => array(
+            'http://purl.org/dc/terms/type',
             'http://rs.tdwg.org/dwc/terms/basisOfRecord',
             'http://rs.tdwg.org/dwc/terms/BasisOfRecord'
         )
@@ -72,6 +73,7 @@ $cpss[] = (object)array(
         'required' => false,
         'resource_expected' => false,
         'qnames' => array(
+            'http://rs.tdwg.org/dwc/terms/previousIdentifications',
             'http://rs.tdwg.org/dwc/terms/originalNameUsage',
             'http://rs.tdwg.org/dwc/terms/previousIdentifications'
         )

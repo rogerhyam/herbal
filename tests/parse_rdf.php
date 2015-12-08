@@ -10,7 +10,7 @@
 <h2>Parsing RDF</h2>
 
 <h3>CETAF Specimen Preview Profile</h3>
-<p>Prefered URI's a listed first followed by depricated URIs.</p>
+<p>Prefered URI's are listed first followed by any depricated URIs that may contain the required values.</p>
 <table>
     <tr>
         <th>CPSS Element</th>

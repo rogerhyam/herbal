@@ -12,10 +12,18 @@
         echo_error('No URI given.');
         $proceed = false;
     }else{
+        
+        // append it to the log file
+        $log = date(DATE_ATOM) . "\t" .  $_SERVER['REMOTE_ADDR'] . "\t" . $uri . "\n"; 
+        file_put_contents('../data/uri.log', $log, FILE_APPEND);
+        
         $parts = parse_url($uri);
         
         // we don't support non http uris
-        if(strtolower($parts['scheme']) != 'http'){
+        if(!isset($parts['scheme'])){
+            echo_error("There is no schema in the URI");
+            $proceed = false;
+        }elseif(strtolower($parts['scheme']) != 'http'){
             echo_error("The scheme '". $parts['scheme'] ."' is not supported. http only please.");
             $proceed = false;
         }else{
@@ -23,7 +31,10 @@
         }
         
         // check it isn't a ip address
-        if(filter_var($parts['host'], FILTER_VALIDATE_IP)){
+        if(!isset($parts['host'])){
+            echo_error("There is no host in the URI");
+            $proceed = false;
+        }elseif(filter_var($parts['host'], FILTER_VALIDATE_IP)){
             echo_error("The host '". $parts['host'] ."' appears to be an IP address. These are not considered persistent. You must use a domain name.");
             $proceed = false;
         }else{
