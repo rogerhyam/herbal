@@ -9,7 +9,7 @@ so we can add it.
 ## Botanischer Garten und Botanisches Museum Berlin-Dahlem
 * [Website](http://bgbm.org/en)
 * Example: <http://herbarium.bgbm.org/object/B100277113> {[test](/index.php?uri=http://herbarium.bgbm.org/object/B100277113)}
-* DarwinCore Dump Location: <>
+* Catalogue: <http://ww2.bgbm.org/Herbarium/>
 
 ## Museum für Naturkunde, Berlin
 * [Website](http://www.naturkundemuseum-berlin.de/)
