@@ -13,8 +13,7 @@ so we can add it.
 
 ## Museum für Naturkunde, Berlin
 * [Website](http://www.naturkundemuseum-berlin.de/)
-* Example: <> {[test]()}
-* Catalogue: <>
+* Example: <http://coll.mfn-berlin.de/u/ZMB_Orth_BA000061S01> {[test](http://coll.mfn-berlin.de/u/ZMB_Orth_BA000061S01)}
 
 ## Muséum national d'histoire naturelle, Paris
 * [Website](http://www.mnhn.fr/)
