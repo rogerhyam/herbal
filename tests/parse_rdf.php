@@ -13,7 +13,7 @@
 <p>Prefered URI's are listed first followed by any depricated URIs that may contain the required values.</p>
 <table>
     <tr>
-        <th>CPSS Element</th>
+        <th>CSPP Element</th>
         <th>Mandatory</th>
         <th>RDF resource URI</th>
         <th>Resource Expected</th>

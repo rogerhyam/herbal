@@ -11,10 +11,6 @@ interest in adding more functionality to those that are in place.
 This is a simple service for testing specimen URIs. It is hoped it will accelerate adoption of URIs
 and improve quality/scope of implementations.
 
-Why "herbal"? This service is being run by the Royal Botanic Garden Edinburgh. It 
-needed a name and we have the keyboard so get to choose!
-But everything here is as applicable to zoological (or geological) specimens as botanical ones.
-
 ## Background
 
 The development of use of URIs for specimens is very much a community effort involving
@@ -31,6 +27,12 @@ The presentation slides give a graphical summary [[PDF](http://stories.rbge.org.
 A follow up meeting/workshop under the auspices of CETAF was held where [a series of presentations were given](http://stories.rbge.org.uk/archives/3846).
 At this meeting BGBM Berlin, RBGE Kew and MNHN Paris expressed interest in implementation which set the ball rolling for wider adoption.
 The most recent discussions were at a [CETAF meeting in Geneva](http://cetafidentifiers.biowikifarm.net/wiki/Geneva_meeting) where this tester site was proposed.
+
+CETAF also produced a poster illustrating how the URIs work. [[PDF](http://cetaf.org/sites/default/files/cetaf-istc_stable_identifiers_poster50x70.pdf)]
+
+[![CETAF Poster](/images/cetaf-istc_stable_identifiers_poster50x70.jpg)](http://cetaf.org/sites/default/files/cetaf-istc_stable_identifiers_poster50x70.pdf)
+
+There is discussion on best practice [on this wiki](http://wiki.pro-ibiosphere.eu/wiki/Best_practices_for_stable_URIs).
 
 Please refer to these resources for detailed discussion of implementation of HTTP URIs for specimens. Only a summary is given below.
 
@@ -81,8 +83,6 @@ to the user it could use CSPP data to display a summary of the specimen
 the user would see if they followed the link. It is analogous to the 
 mechanism used by social media sites and search engines when linking to web
 pages.
-
-
 
 ## Status
 
