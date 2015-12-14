@@ -2,9 +2,17 @@
 
 Any natural history collection is free to implement persistant semantic web compatible
 URIs for its specimens so it can be difficult to keep track of who has implemented them and 
-to what level they are implemented. Below is a list of the ones we know about.
+to what level they are implemented. Below is a list of the ones we know about. Some of these
+may have been created totally separate from any of the things mentioned in the
+<a href="index.php?md=">documentation</a>.
+
 If an institution is missing please accept our appologies and [get in contact](/md.php?q=contact)
 so we can add it.
+
+## AntWeb.org
+* [Website](https://www.antweb.org)
+* Example: <http://www.antweb.org/specimen/CASENT0104542> {[test](/index.php?uri=http://www.antweb.org/specimen/CASENT0104542)}
+* Catalogue: <https://www.antweb.org/>
 
 ## Botanischer Garten und Botanisches Museum Berlin-Dahlem
 * [Website](http://bgbm.org/en)
@@ -14,6 +22,16 @@ so we can add it.
 ## Finnish Museum of Natural History, Helsinki
 * [Website](https://www.luomus.fi/)
 * Example: <http://id.luomus.fi/GL.749> {[test](index.php?uri=http://id.luomus.fi/GL.749)}
+
+## Harvard Herbarium
+* [Website](http://huh.harvard.edu/)
+* Example: <http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/413bd724-7a92-41fe-befa-c7e1678b54a7> {[test](index.php?uri=http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/413bd724-7a92-41fe-befa-c7e1678b54a7)}
+* Catalogue: <http://kiki.huh.harvard.edu/databases/specimen_index.html>
+
+## Harvard Museum of Comparative Zoology
+* [Website](http://www.mcz.harvard.edu/)
+* Example: <http://mczbase.mcz.harvard.edu/guid/MCZ:Mamm:53924> {[test](index.php?uri=http://mczbase.mcz.harvard.edu/guid/MCZ:Mamm:53924)}
+* Catalogue: <http://mczbase.mcz.harvard.edu/SpecimenSearch.cfm>
 
 ## Museum für Naturkunde, Berlin
 * [Website](http://www.naturkundemuseum-berlin.de/)
