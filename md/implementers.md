@@ -4,7 +4,7 @@ Any natural history collection is free to implement persistant semantic web comp
 URIs for its specimens so it can be difficult to keep track of who has implemented them and 
 to what level they are implemented. Below is a list of the ones we know about. Some of these
 may have been created totally separate from any of the things mentioned in the
-<a href="index.php?md=">documentation</a>.
+<a href="md.php?q=documentation">documentation</a>.
 
 If an institution is missing please accept our appologies and [get in contact](/md.php?q=contact)
 so we can add it.
