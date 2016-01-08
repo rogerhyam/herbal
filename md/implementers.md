@@ -44,7 +44,7 @@ so we can add it.
  
 ## Naturalis, Netherlands
 * [Website](http://www.naturalis.nl/)
-* Example: <http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103> {[test](/index.php?http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103)}
+* Example: <http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103> {[test](/index.php?uri=http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103)}
 * Catalogue: <http://bioportal.naturalis.nl/>
 
 ## Royal Botanic Garden Edinburgh
