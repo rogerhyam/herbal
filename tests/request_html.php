@@ -22,6 +22,11 @@
         echo_ok("Redirect to URI: <a target=\"_new\" href=\"". $response->info['redirect_url'] ."\">" . $response->info['redirect_url']  . "</a>");
         $iFrameUri =  $response->info['redirect_url'];
         $requestRdf = true;
+    }elseif($response->info['http_code'] == 302){
+        echo_warning("Recieved 302 Redirect HTTP code. This should be a 303 as we are assuming support for HTTP1.1 ~ 302 is so last century :)");
+        echo_ok("Redirect to URI: <a target=\"_new\" href=\"". $response->info['redirect_url'] ."\">" . $response->info['redirect_url']  . "</a>");
+        $iFrameUri =  $response->info['redirect_url'];
+        $requestRdf = true;
     }elseif($response->info['http_code'] == 200){
         echo_ok("Recieved 200 OK HTTP code.");
         $iFrameUri = $uri;
