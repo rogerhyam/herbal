@@ -41,7 +41,12 @@ so we can add it.
 * [Website](http://www.mnhn.fr/)
 * Example: <http://coldb.mnhn.fr/catalognumber/mnhn/p/p00084058> {[test](/index.php?uri=http://coldb.mnhn.fr/catalognumber/mnhn/p/p00084058)}
 * Catalogue: <https://science.mnhn.fr/all/search>
- 
+
+## Natural History Museum, London
+* [Website](http://www.nhm.ac.uk/)
+* Example: <http://data.nhm.ac.uk/object/8e2f81f5-110d-45e8-8e5a-34e8d30a1a49> {[test](index.php?uri=http://data.nhm.ac.uk/object/8e2f81f5-110d-45e8-8e5a-34e8d30a1a49)}
+* Catalogue: <http://data.nhm.ac.uk/>
+
 ## Naturalis, Netherlands
 * [Website](http://www.naturalis.nl/)
 * Example: <http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103> {[test](/index.php?uri=http://data.biodiversitydata.nl/naturalis/specimen/RMNH.AVES.110103)}
