@@ -39,7 +39,7 @@ specimenPop.hidePop = function(){
         $('a.cetaf-specimen-link:hover').length == 0
         )
     {
-        //$('#cetaf-specimen-link-pop').hide('slow');
+        $('#cetaf-specimen-link-pop').hide('slow');
     }
 }
 
