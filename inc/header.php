@@ -7,10 +7,12 @@
   <head>
     <title>CETAF URI Tester</title>
     <link rel="stylesheet" href="style/main.css" type="text/css" />
+    <link rel="stylesheet" href="style/specimen_popup.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="style/cssmenu/styles.css">
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script src="style/cssmenu/script.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/specimen_popup.js"></script>
   </head>
   <body>
   <header>

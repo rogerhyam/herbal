@@ -62,6 +62,11 @@ function get_headers_from_curl_response($response){
     return $headers;
 }
 
+function get_body_from_curl_response($response){
+    return trim(substr($response, strpos($response, "\r\n\r\n")));
+}
+
+
 function echo_error($message){
     echo_message($message, 'herbal-error');
 }

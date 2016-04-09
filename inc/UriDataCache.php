@@ -46,8 +46,8 @@ class UriDataCache{
         if(!$this->is_recognised_uri()) return null;
         
         // try and load it from the db
-        //$this->load_data();
-        //if($this->data) return $this->data;
+        $this->load_data();
+        if($this->data) return $this->data;
         
         // try and fetch it
         $this->fetch_data();
@@ -64,6 +64,10 @@ class UriDataCache{
         $sql = "SELECT * FROM uri_data WHERE uri = '$this->uri'";
         $result = $this->mysqli->query($sql);
         $this->data = $result->fetch_assoc();
+        
+        // update the staleness of the record
+        $sql = "UPDATE uri_data SET stale = stale + 1 WHERE uri = '$this->uri'";
+        $this->mysqli->query($sql);
         
     }
     
@@ -112,12 +116,16 @@ class UriDataCache{
     
     private function save_data($template){
         
+        // we refuse to save things that neither have rdf nor html
+        // presumably the call failed
+        if(!$template['html_raw'] && !$template['rdf_raw']) return;
+        
         $stmt = $this->mysqli->prepare("INSERT INTO uri_data 
-            (uri,html_raw,rdf_raw, words, log,stale)
+            (uri,html_raw,rdf_raw, words, log,stale, created)
             VALUES
-            (?,?,?,?,?,0)
+            (?,?,?,?,?,-1, now())
             ON DUPLICATE KEY UPDATE 
-            html_raw = ?, rdf_raw = ?, words = ?, log = ?, stale = 0
+            html_raw = ?, rdf_raw = ?, words = ?, log = ?, stale = -1
             ");
         
        // printf("Errormessage: %s\n", $this->mysqli->error);
