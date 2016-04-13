@@ -82,7 +82,23 @@ URIs for specimens in other collections instead of displaying just the URI
 to the user it could use CSPP data to display a summary of the specimen 
 the user would see if they followed the link. It is analogous to the 
 mechanism used by social media sites and search engines when linking to web
-pages.
+pages. A demo of this is included on the [implementers page](md.php?q=implementers).
+
+<a name="search"></a>
+## Search ##
+
+To get the popup demo to work responsively it was necessary to cache the data retrieved 
+for each URI. This was done as a simple, one table MySQL database. As data 
+accumulated in the cache it seemed logical to add a [search facility](search.php) using 
+MySQL fulltext search and to seed the cache with some specimen URIs.
+
+This is a just-a-bit-of-fun feature but also demonstrates how simple it *might* 
+be to build a _proper_ index across multiple herbaria/museums if they
+fully implement presistent HTTP URIs.
+
+Also searching for a URI will force it to be saved or re-saved but to be
+indexed URI's need to have their domain registered in the config file. So it only
+works with collections we know about.
 
 ## Status
 

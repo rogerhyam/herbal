@@ -1,4 +1,9 @@
 
+.cetaf-specimen-link{
+    border:solid 1px gray;
+    padding: 2px;
+}
+
 #cetaf-specimen-link-pop{
     display: none;
     position: fixed;

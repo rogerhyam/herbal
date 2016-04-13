@@ -7,7 +7,7 @@
 
 class UriDataCache{
     
-    private $uri = null;
+    public $uri = null;
     private $uri_regexes = array();
     private $data = null;
     
@@ -43,7 +43,10 @@ class UriDataCache{
         if($this->data) return $data;
         
         // check we have a good uri
-        if(!$this->is_recognised_uri()) return null;
+        if(!$this->is_recognised_uri()){
+          echo "Not recognised";
+          return null;  
+        } 
         
         // try and load it from the db
         $this->load_data();
@@ -59,7 +62,7 @@ class UriDataCache{
     /*
         Loads data from database
     */
-    private function load_data(){
+    public function load_data(){
         
         $sql = "SELECT * FROM uri_data WHERE uri = '$this->uri'";
         $result = $this->mysqli->query($sql);
@@ -74,7 +77,7 @@ class UriDataCache{
     /*
         Fetches data for URI and stores it in the database
     */
-    private function fetch_data(){
+    public function fetch_data(){
         
         // initialise it
         $template = array(
@@ -89,6 +92,9 @@ class UriDataCache{
         
         $this->fetch_html_data($template);
         $this->fetch_rdf_data($template);
+        
+       // var_dump($template);
+        
         $this->create_index_vals($template);
         $this->save_data($template);
       
@@ -128,8 +134,6 @@ class UriDataCache{
             html_raw = ?, rdf_raw = ?, words = ?, log = ?, stale = -1
             ");
         
-       // printf("Errormessage: %s\n", $this->mysqli->error);
-        
         $stmt->bind_param(
             "sssssssss", 
             $this->uri,
@@ -165,7 +169,7 @@ class UriDataCache{
         $template['log'] .= "Response code: $response_code .\n";
         
         if($response_code == 200){
-            $template['html_raw'] = $response->response;
+            $template['html_raw'] = $response->body;
             return;
         }
         
@@ -176,11 +180,11 @@ class UriDataCache{
              
              $curl = get_curl_handle($response->info['redirect_url']);
              curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: text/html"));
+             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // extra redirects for Paris!
              $response = run_curl_request($curl);
              if($response->info['http_code'] == 200){
-                 
                 $template['log'] .= "Response code: 200.\n";
-                $template['html_raw'] = $response->response;
+                $template['html_raw'] = $response->body;
                 return;
              }
              
@@ -199,12 +203,14 @@ class UriDataCache{
         $curl = get_curl_handle($this->uri);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml"));
         $response = run_curl_request($curl);
+       
+        //var_dump($response);
         
         $response_code = $response->info['http_code'];
         $template['log'] .= "Response code: $response_code .\n";
         
         if($response_code == 200){
-            $template['rdf_raw'] = $response->response;
+            $template['rdf_raw'] = $response->body;
             return;
         }
         
@@ -215,17 +221,21 @@ class UriDataCache{
              
              $curl = get_curl_handle($response->info['redirect_url']);
              curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml"));
+             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // extra redirects for Paris!
              $response = run_curl_request($curl);
+             
+             //var_dump($response);
+             
              if($response->info['http_code'] == 200){
                 $template['log'] .= "Response code: 200.\n";
-                $template['rdf_raw'] = $response->response;
+                $template['rdf_raw'] = $response->body;
                 return;
              }
              
         }
         
         // not recognised the response code
-        $template['log'] .= "Failed to get HTML for uri.\n";
+        $template['log'] .= "Failed to get RDF for uri.\n";
 
     }
     

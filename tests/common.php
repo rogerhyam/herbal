@@ -22,12 +22,15 @@ function get_curl_handle($uri){
 function run_curl_request($curl){
    
    $out['response'] = curl_exec($curl);
+   
    $out['error'] = curl_errno($curl);
    
     if(!$out['error']){
         // no error
-        $out['headers'] = get_headers_from_curl_response($out['response']);
         $out['info'] = curl_getinfo($curl);
+        $out['headers'] = get_headers_from_curl_response($out);
+        $out['body'] = trim(substr($out['response'], $out['info']["header_size"]));
+
     }else{
         // we are in error
         $out['error_message'] = curl_error($curl);
@@ -44,20 +47,23 @@ function run_curl_request($curl){
  * cURL returns headers as sting so we need to chop them into
  * a useable array - even though the info is in the 
  */
-function get_headers_from_curl_response($response){
+function get_headers_from_curl_response($out){
+    
     $headers = array();
+    
+    // may be multiple header blocks - we want the last
+    $headers_block = substr($out['response'], 0, $out['info']["header_size"]-1);
+    $blocks = explode("\r\n\r\n", $headers_block);
+    $header_text = trim($blocks[count($blocks) -1]);
 
-    $header_text = substr($response, 0, strpos($response, "\r\n\r\n"));
-
-    foreach (explode("\r\n", $header_text) as $i => $line)
-        if ($i === 0)
+    foreach (explode("\r\n", $header_text) as $i => $line){
+        if ($i === 0){
             $headers['http_code'] = $line;
-        else
-        {
+        }else{
             list ($key, $value) = explode(': ', $line);
-
             $headers[$key] = $value;
         }
+    }
 
     return $headers;
 }

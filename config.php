@@ -6,7 +6,18 @@ date_default_timezone_set('UTC');
 // also we will try and add a popup box to them when we render then as links
 $uri_regexes = array(
         '/^http:\/\/data.rbge.org.uk\//',
-        '/^http:\/\/herbarium.bgbm.org\/object\//'
+        '/^http:\/\/herbarium.bgbm.org\/object\//',
+        '/^http:\/\/coldb.mnhn.fr\/catalognumber\//',
+        '/^http:\/\/specimens.kew.org\//',
+        '/^http:\/\/www.antweb.org\/specimen\//',
+        '/^http:\/\/id.luomus.fi\//',
+        '/^http:\/\/purl.oclc.org\/net\/edu.harvard.huh\//',
+        '/^http:\/\/mczbase.mcz.harvard.edu\/guid\//',
+        //'/^http:\/\/coll.mfn-berlin.de\//',
+        //'/^http:\/\/data.nhm.ac.uk\/object\//',
+        '/^http:\/\/data.biodiversitydata.nl\/naturalis\/specimen\//',
+        '/^http:\/\/col.smns-bw.org\/object\//',
+        '/^http:\/\/id.zfmk.de\//'
 );
 
 $db_host = 'localhost';
@@ -25,8 +36,5 @@ if ($mysqli->connect_error) {
 if (!$mysqli->set_charset("utf8")) {
   echo printf("Error loading character set utf8: %s\n", $mysqli->error);
 }
-
-
-
 
 ?>
