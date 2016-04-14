@@ -26,9 +26,9 @@
          }
          
          
-         $stmt = $mysqli->prepare("SELECT uri FROM uri_data WHERE MATCH (words) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT 30;");
+         $stmt = $mysqli->prepare("SELECT uri FROM uri_data WHERE MATCH (words) AGAINST (? IN NATURAL LANGUAGE MODE) ORDER BY MATCH(words) AGAINST(?) DESC LIMIT 30;");
          // printf("Errormessage: %s\n", $this->mysqli->error);
-         $stmt->bind_param("s",  $q);
+         $stmt->bind_param("ss",  $q, $q);
          $stmt->bind_result($uri);
          $stmt->execute();
          $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
