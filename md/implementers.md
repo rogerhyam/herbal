@@ -2,11 +2,16 @@
 
 Any natural history collection is free to implement persistant semantic web compatible
 URIs for its specimens so it can be difficult to keep track of who has implemented them and 
-to what level they are implemented. Below is a list of the ones we know about. Some of these
-may have been created totally separate from any of the things mentioned in the
+to what level they are implemented. Below is a list of some we know about that 
+may be useful to look at. Some of these may have been created totally separately
+from any of the things mentioned in the
 <a href="md.php?q=documentation">documentation</a>.
 
-If an institution is missing please accept our appologies and [get in contact](/md.php?q=contact)
+For a list of institutions who are participating in the CETAF Stable Identifiers initiative 
+[see the list on the CETAF website](http://cetaf.org/cetaf-stable-identifiers).
+
+The list below is not intended to be exhaustive but if an institution is missing 
+and you would like it to be included please [get in contact](/md.php?q=contact)
 so we can add it.
 
 ## AntWeb.org
@@ -18,6 +23,11 @@ so we can add it.
 * [Website](http://bgbm.org/en)
 * Example: <http://herbarium.bgbm.org/object/B100277113> {[test](/index.php?uri=http://herbarium.bgbm.org/object/B100277113)}
 * Catalogue: <http://ww2.bgbm.org/Herbarium/>
+
+## Institute of Botany, Slovak Academy of Sciences, Bratislava
+* [Website](http://ibot.sav.sk/)
+* Example: <http://ibot.sav.sk/herbarium/object/SAV0001234> {[test](/index.php?uri=http://ibot.sav.sk/herbarium/object/SAV0001234)}
+* RDF Bag: <http://ibot.sav.sk/herbarium>
 
 ## Finnish Museum of Natural History, Helsinki
 * [Website](https://www.luomus.fi/)
@@ -61,7 +71,7 @@ so we can add it.
 * [Website](http://www.rbgkew.org.uk)
 * Example: <http://specimens.kew.org/herbarium/K001116483> {[test](/index.php?uri=http://specimens.kew.org/herbarium/K001116483)}
 * Catalogue: <http://apps.kew.org/herbcat/gotoHomePage.do>
- 
+
 ## Staatliches Museum Für Naturkunde Stuttgart
 * [Website](http://www.naturkundemuseum-bw.de/)
 * Example: <http://col.smns-bw.org/object/S10000227722006> {[test](/index.php?uri=http://col.smns-bw.org/object/S10000227722006)}

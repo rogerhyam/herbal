@@ -13,11 +13,12 @@ $uri_regexes = array(
         '/^http:\/\/id.luomus.fi\//',
         '/^http:\/\/purl.oclc.org\/net\/edu.harvard.huh\//',
         '/^http:\/\/mczbase.mcz.harvard.edu\/guid\//',
-        //'/^http:\/\/coll.mfn-berlin.de\//',
-        //'/^http:\/\/data.nhm.ac.uk\/object\//',
+        '/^http:\/\/coll.mfn-berlin.de\//',
+        '/^http:\/\/data.nhm.ac.uk\/object\//',
         '/^http:\/\/data.biodiversitydata.nl\/naturalis\/specimen\//',
         '/^http:\/\/col.smns-bw.org\/object\//',
-        '/^http:\/\/id.zfmk.de\//'
+        '/^http:\/\/id.zfmk.de\//',
+        '/^http:\/\/ibot.sav.sk\/herbarium\//'
 );
 
 $db_host = 'localhost';

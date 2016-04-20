@@ -28,6 +28,8 @@ A follow up meeting/workshop under the auspices of CETAF was held where [a serie
 At this meeting BGBM Berlin, RBGE Kew and MNHN Paris expressed interest in implementation which set the ball rolling for wider adoption.
 The most recent discussions were at a [CETAF meeting in Geneva](http://cetafidentifiers.biowikifarm.net/wiki/Geneva_meeting) where this tester site was proposed.
 
+CETAF now has [a group dedicated to implementation of stable identifiers](http://cetaf.org/cetaf-stable-identifiers).
+
 CETAF also produced a poster illustrating how the URIs work. [[PDF](http://cetaf.org/sites/default/files/cetaf-istc_stable_identifiers_poster50x70.pdf)]
 
 [![CETAF Poster](/images/cetaf-istc_stable_identifiers_poster50x70.jpg)](http://cetaf.org/sites/default/files/cetaf-istc_stable_identifiers_poster50x70.pdf)
