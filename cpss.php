@@ -96,6 +96,7 @@ $cpss[] = (object)array(
         'required' => false,
         'resource_expected' => false,
         'qnames' => array(
+            'http://rs.tdwg.org/dwc/terms/fieldNumber',
             'http://rs.tdwg.org/dwc/terms/recordNumber',
             'http://rs.tdwg.org/dwc/terms/CollectorNumber'
          )
