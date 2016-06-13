@@ -72,6 +72,10 @@ so we can add it.
 * Example: <http://specimens.kew.org/herbarium/K001116483> {[test](/index.php?uri=http://specimens.kew.org/herbarium/K001116483)}
 * Catalogue: <http://apps.kew.org/herbcat/gotoHomePage.do>
 
+## Staatliche Naturwissenschaftliche Sammlungen Bayerns
+* [Website](http://www.snsb.mwn.de/index.php/en/)
+* Example: <http://id.snsb.info/SNSB/Collection/97112/153455/93009> {[test](/index.php?uri=http://id.snsb.info/SNSB/Collection/97112/153455/93009)}
+
 ## Staatliches Museum Für Naturkunde Stuttgart
 * [Website](http://www.naturkundemuseum-bw.de/)
 * Example: <http://col.smns-bw.org/object/S10000227722006> {[test](/index.php?uri=http://col.smns-bw.org/object/S10000227722006)}
