@@ -65,6 +65,19 @@ Accept type to 'application/rdf+xml' then the result is RDF metadata about the s
 
 Level 2 provides basic machine readable data and integrates specimen URIs with the semantic web.
 
+#### Importance of 303 Redirect
+
+At level 2 the stable URI is acting as an identifier of a non-digital or "other" object from the point of view of the Semantic Web.
+This means that the server must not return digital data as it would if the URI was identifying a JPEG image for example.
+Instead the server must respond with an HTTP 303 Redirect code, known as the "See Other" code, to send the client to an appropriate digital 
+resource that has information about the non-digital thing.
+
+Without this redirect mechanism it is difficult to make assertions in the data that are not ambiguous.
+As an example, if someone were to assert dc:created for the URI without the 303 mechanism it wouldn’t be clear
+if they were telling us when the HTML page, the RDF data or the specimen was created.
+We need to be able to clearly differentiate between these things and hence
+the 303 redirect is required for level 2 conformance.
+
 ### Level 3
 
 Level 2 doesn't specify the content of the RDF data. At Level 3 application specific

@@ -46,6 +46,7 @@
 
     if(!$requestRdf){
         echo_info("No 303 redirect so stopping here.");
+        echo_info("Check out 'Importance of 303 Redirect' in the <a href=\"/md.php?q=documentation\">documentation</a>.");
     }else{
         echo_info("Had 303 redirect when asking for HTML so will request RDF format.");
 ?>
