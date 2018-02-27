@@ -24,6 +24,11 @@ so we can add it.
 * Example: <http://herbarium.bgbm.org/object/B100277113> {[test](/index.php?uri=http://herbarium.bgbm.org/object/B100277113)}
 * Catalogue: <http://ww2.bgbm.org/Herbarium/>
 
+## Botanic Garden Meise
+* [Website](http://www.br.fgov.be/)
+* Example: <http://www.botanicalcollections.be/specimen/BR0000008808738> {[test](/index.php?uri=http://www.botanicalcollections.be/specimen/BR0000008808738)}
+* Catalogue: <http://www.botanicalcollections.be/#/en/home>
+
 ## Institute of Botany, Slovak Academy of Sciences, Bratislava
 * [Website](http://ibot.sav.sk/)
 * Example: <http://ibot.sav.sk/herbarium/object/SAV0001234> {[test](/index.php?uri=http://ibot.sav.sk/herbarium/object/SAV0001234)}

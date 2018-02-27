@@ -18,7 +18,8 @@ $uri_regexes = array(
         '/^http:\/\/data.biodiversitydata.nl\/naturalis\/specimen\//',
         '/^http:\/\/col.smns-bw.org\/object\//',
         '/^http:\/\/id.zfmk.de\//',
-        '/^http:\/\/ibot.sav.sk\/herbarium\//'
+        '/^http:\/\/ibot.sav.sk\/herbarium\//',
+        '/^http:\/\/www.botanicalcollections.be\/specimen\//'
 );
 
 $db_host = 'localhost';
