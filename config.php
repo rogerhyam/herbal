@@ -19,7 +19,8 @@ $uri_regexes = array(
         '/^http:\/\/col.smns-bw.org\/object\//',
         '/^http:\/\/id.zfmk.de\//',
         '/^http:\/\/ibot.sav.sk\/herbarium\//',
-        '/^http:\/\/www.botanicalcollections.be\/specimen\//'
+        '/^http:\/\/www.botanicalcollections.be\/specimen\//',
+        '/^http:\/\/darwinweb.africamuseum.be\/object\//'
 );
 
 $db_host = 'localhost';

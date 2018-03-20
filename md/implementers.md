@@ -25,7 +25,7 @@ so we can add it.
 * Catalogue: <http://ww2.bgbm.org/Herbarium/>
 
 ## Botanic Garden Meise
-* [Website](http://www.br.fgov.be/)
+* [Website](http://www.plantentuinmeise.be/)
 * Example: <http://www.botanicalcollections.be/specimen/BR0000008808738> {[test](/index.php?uri=http://www.botanicalcollections.be/specimen/BR0000008808738)}
 * Catalogue: <http://www.botanicalcollections.be/#/en/home>
 
@@ -76,6 +76,11 @@ so we can add it.
 * [Website](http://www.rbgkew.org.uk)
 * Example: <http://specimens.kew.org/herbarium/K001116483> {[test](/index.php?uri=http://specimens.kew.org/herbarium/K001116483)}
 * Catalogue: <http://apps.kew.org/herbcat/gotoHomePage.do>
+ 
+## Royal Museum for Central Africa Tervuren
+* [Website](http://www.africamuseum.be/)
+* Example: <http://darwinweb.africamuseum.be/object/RMCA_Vert_2011.003.P.1885-1898> {[test](/index.php?uri=http://darwinweb.africamuseum.be/object/RMCA_Vert_2011.003.P.1885-1898)}
+* Catalogue: <http://darwinweb.africamuseum.be/search_specimens>
 
 ## Staatliche Naturwissenschaftliche Sammlungen Bayerns
 * [Website](http://www.snsb.mwn.de/index.php/en/)
