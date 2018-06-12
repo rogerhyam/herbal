@@ -1,2 +1,5 @@
 vendor
 data
+._*
+.DS_Store
+

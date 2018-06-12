@@ -1,5 +1,7 @@
 <?php
 
+require '/var/herbal_secure.php';
+
 date_default_timezone_set('UTC');
 
 // uri's must match one of these regexes to be handled
@@ -23,10 +25,6 @@ $uri_regexes = array(
         '/^http:\/\/darwinweb.africamuseum.be\/object\//'
 );
 
-$db_host = 'localhost';
-$db_database = 'herbal';
-$db_user = 'herbal';
-$db_password = 'herbaljuice';
 
 // create and initialise the database connection
 $mysqli = new mysqli($db_host, $db_user, $db_password, $db_database);    
