@@ -16,7 +16,7 @@ include_once('../tests/common.php');
 // get a list of the watches 
 $watch_files = glob('conf/*.txt');
 
-// lets prepare a statement as we will use it each time
+// let's prepare a statement as we will use it each time
 $stmt = $mysqli->prepare("INSERT INTO monitor (`email`,`cetaf_id`, `html_response_code`, `html_uri`, `html_uri_response_code`, `rdf_response_code`, `rdf_uri`, `rdf_uri_response_code`, `rdf_triplets` ) VALUES (?,?,?,?,?,?,?,?,?)");
 
 

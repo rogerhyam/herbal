@@ -22,6 +22,7 @@
              <li><a href='/search.php' >Search</a></li>
              <li><a href='/md.php?q=implementers' >Implementers</a></li>
              <li class='active'><a href='/md.php?q=documentation'>Documentation</a></li>
+			 <li><a href='/md.php?q=monitor' >Monitor</a></li>
              <li><a href='/md.php?q=contact' >Contact</a></li>
           </ul>
     </div>
