@@ -86,13 +86,13 @@ function send_report($email){
 	// send the email
 
 	
-	echo "<h1>$subject</h1>";
-	echo $body;
+	//echo "<h1>$subject</h1>";
+	//echo $body;
 	
 
 	$mail = new PHPMailer;
 	
-	$mail->SMTPDebug = 3;                               
+//	$mail->SMTPDebug = 3;                               
 
 	//Set PHPMailer to use SMTP.
 	$mail->isSMTP();            
