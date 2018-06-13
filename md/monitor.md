@@ -10,11 +10,11 @@ Once each hour the monitor randomly picks one of the CETAF Identifiers in the fi
 
 Once a day the monitor sends an email to the email address on the first line of the file with the results of calls from the last 24 hours.
 
-If all the calls have resulted in 303 redirects and redirected calls to RDF have resulted in a 200 response with RDF that can be parsed to produce one or more triples then the subject line of the email will start "OK: CETAF IDs ". If these conditions aren't met then the subject will start "FAULTS: CETAF IDs ".
+If all the calls have resulted in 303 redirects and redirected calls to RDF have resulted in 200 response codes and RDF that can be parsed to produce one or more triples then the subject line of the email will start "OK: CETAF IDs ". If these conditions aren't met then the subject will start "FAULTS: CETAF IDs ".
 
-The monitor service is only for implementers who are at Level 2 or above and have implemented RDF metadata responses. Currently it does not test the contents of the RDF metadata for Level 3 compliance. 
+The monitor service is suitable for implementers who are at Level 2 or above and have implemented RDF metadata responses. Currently it does not test the contents of the RDF metadata for Level 3 compliance. 
 
-Admins can write simple email filters to hide "OK" if need be. At this stage providing a failsafe OK email ensures the monitor is running!
+Admins can write simple email filters to hide or delete the "OK" emails if need be. At this stage providing a failsafe OK email ensures the monitor is running!
 
 All monitor data is kept. In future we may provide a graphical display of implementer performance across the network.
 
