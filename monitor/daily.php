@@ -21,7 +21,7 @@ foreach($watch_files as $file){
 
 function send_report($email){
 	
-	include_once('../config.php');
+	include('../config.php');
 		
 	// get a list of all the calls in the last 24 hrs
 	$sql = "SELECT * FROM herbal.monitor WHERE email = '$email' AND `created` > DATE_SUB(now(), INTERVAL 24 hour)";

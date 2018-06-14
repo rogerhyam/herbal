@@ -80,11 +80,13 @@ function test_id($email, $id, $stmt){
 		if($results['rdf_response_code'] == 303 || $results['rdf_response_code'] == 302){
 			$results['rdf_uri'] = $response->info['redirect_url'];
 			$results['rdf_uri_response_code'] = get_response_code($response->info['redirect_url']);
-		
-			// if we have a 200 OK for the RDF lets check if it is valid
-			if($results['rdf_uri_response_code'] == 200){
+			//print_r($response->info);		
+                        
+                        // if we have a 200 OK for the RDF lets check if it is valid
+			if($results['rdf_uri_response_code'] == 200){			
 				$doc = new EasyRdf_Graph($response->info['redirect_url']);
-				$triplets = $doc->load($id,'rdfxml');
+				// $triplets = $doc->load($id,'rdfxml');
+				$triplets = $doc->load($response->info['redirect_url'],'rdfxml');
 				if($triplets){
 					$results['rdf_triplets'] = $triplets;
 				}
