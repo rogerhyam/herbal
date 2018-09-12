@@ -12,7 +12,7 @@
         <form method="GET" action="search.php">
             <input type="text" size="100" value="<?php echo @$_GET['q'] ?>" name="q" />
             <input type="submit"  value="Search" />
-            [<a href="https://herbal-rogerhyam-1.c9.io/md.php?q=documentation#search">Help</a>]
+            [<a href="/md.php?q=documentation#search">Help</a>]
         </form>
         <div class="cetaf-search-results">
 <?php

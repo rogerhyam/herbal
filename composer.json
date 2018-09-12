@@ -1,6 +1,9 @@
 {
     "require": {
         "easyrdf/easyrdf": "*",
-        "erusev/parsedown": "*"
+        "erusev/parsedown": "*",
+		"ml/json-ld": "*",
+		"phpmailer/phpmailer": "*",
+		"league/oauth2-google": "*"
     }
 }
