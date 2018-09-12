@@ -91,6 +91,11 @@ so we can add it.
 * Example: <http://col.smns-bw.org/object/S10000227722006> {[test](/index.php?uri=http://col.smns-bw.org/object/S10000227722006)}
 * Catalogue: <http://www.smns-bw.org/db/datenbank.php>
 
+## Staatliche Naturwissenschaftliche Sammlungen Bayerns
+* [Website](http://www.snsb.info/)
+* Example: <http://id.snsb.info/snsb/collection/97112/153455/93009> {[test](/index.php?uri=http://id.snsb.info/snsb/collection/97112/153455/93009)}
+* Catalogue: <http://www.snsb.info/dwb_biocase.html>
+
 ## ZFMK, Bonn
 * [Website](https://www.zfmk.de)
 * Example: <http://id.zfmk.de/collection_ZFMK/1650/733377/90217> {[test](/index.php?uri=http://id.zfmk.de/collection_ZFMK/1650/733377/90217)}
