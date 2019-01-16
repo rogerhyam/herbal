@@ -82,14 +82,15 @@ so we can add it.
 * Example: <http://darwinweb.africamuseum.be/object/RMCA_Vert_2011.003.P.1885-1898> {[test](/index.php?uri=http://darwinweb.africamuseum.be/object/RMCA_Vert_2011.003.P.1885-1898)}
 * Catalogue: <http://darwinweb.africamuseum.be/search_specimens>
 
-## Staatliche Naturwissenschaftliche Sammlungen Bayerns
-* [Website](http://www.snsb.mwn.de/index.php/en/)
-* Example: <http://id.snsb.info/SNSB/Collection/97112/153455/93009> {[test](/index.php?uri=http://id.snsb.info/SNSB/Collection/97112/153455/93009)}
-
 ## Staatliches Museum Für Naturkunde Stuttgart
 * [Website](http://www.naturkundemuseum-bw.de/)
 * Example: <http://col.smns-bw.org/object/S10000227722006> {[test](/index.php?uri=http://col.smns-bw.org/object/S10000227722006)}
 * Catalogue: <http://www.smns-bw.org/db/datenbank.php>
+
+## Staatliche Naturwissenschaftliche Sammlungen Bayerns
+* [Website](http://www.snsb.info/)
+* Example: <http://id.snsb.info/snsb/collection/97112/153455/93009> {[test](/index.php?uri=http://id.snsb.info/snsb/collection/97112/153455/93009)}
+* Catalogue: <http://www.snsb.info/dwb_biocase.html>
 
 ## ZFMK, Bonn
 * [Website](https://www.zfmk.de)
