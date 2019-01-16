@@ -23,11 +23,13 @@
         if(!isset($parts['scheme'])){
             echo_error("There is no schema in the URI");
             $proceed = false;
-        }elseif(strtolower($parts['scheme']) != 'http'){
-            echo_error("The scheme '". $parts['scheme'] ."' is not supported. http only please.");
-            $proceed = false;
+        }elseif(strtolower($parts['scheme']) == 'http'){
+            echo_ok("The scheme '". $parts['scheme'] ."' is a recognised schema");
+        }elseif(strtolower($parts['scheme']) == 'https'){
+            echo_ok("The scheme '". $parts['scheme'] ."' is a recognised schema");
         }else{
-            echo_ok("The scheme '". $parts['scheme'] ."' is correct");
+            echo_error("The scheme '". $parts['scheme'] ."' is not supported. http & https only please.");
+            $proceed = false;
         }
         
         // check it isn't a ip address
