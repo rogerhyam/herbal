@@ -2,9 +2,19 @@
     require_once('common.php');
     require_once('../cpss.php');
     require_once('../vendor/autoload.php');
-    $specimen_uri = $_GET['specimen_uri'];
-    $doc = new EasyRdf_Graph($_GET['rdf_uri']);
+    $specimen_uri = $_GET['specimen_uri'];	
+	$doc = new EasyRdf_Graph($_GET['rdf_uri']);
     $doc->load($_GET['rdf_uri'],'rdfxml');
+
+	// now then...
+	// The specimen_uri is the one passed in.
+	// That doesn't mean it is the one the assertions are made about.
+	// They may be made about a different version of the URI that is joined to this one by an owl:sameAs.
+	$sames = $doc->resourcesMatching('owl:sameAs', $doc->resource($specimen_uri));
+	if(count($sames) > 0){
+		$specimen_uri = $sames[0]->getUri();
+	}
+	
 ?>
 <h2>Parsing RDF</h2>
 
@@ -31,8 +41,6 @@
         $is_first = true;
         $is_resource = false;
         foreach($prop->qnames as $uri){
-            
-            
             
             if($is_first) $prefered_class = "herbal-prefered-uri";
             else $prefered_class = "herbal-not-prefered-uri";
