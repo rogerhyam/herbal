@@ -75,18 +75,31 @@ function test_id($email, $id, $stmt){
 	
 	
 	if($response->error == 0){
+		
 		$results['rdf_response_code'] = $response->info['http_code'];
 
 		if($results['rdf_response_code'] == 303 || $results['rdf_response_code'] == 302){
+			
 			$results['rdf_uri'] = $response->info['redirect_url'];
-			$results['rdf_uri_response_code'] = get_response_code($response->info['redirect_url']);
-			//print_r($response->info);		
+			
+			// call for the actual RDF
+			$curl2 = get_curl_handle($results['rdf_uri']);
+		    $response2 = run_curl_request($curl2);
+			
+			// if we get another redirect do it again - because Paris does it and others might
+			if($response2->info['http_code'] == 303 || $response2->info['http_code'] == 302){
+				$curl2 = get_curl_handle($response2->info['redirect_url']);
+				$response2 = run_curl_request($curl2);
+				$results['rdf_uri'] = $response2->info['url'];
+			}
+			
+			$results['rdf_uri_response_code'] = $response2->info['http_code'];			
                         
-                        // if we have a 200 OK for the RDF lets check if it is valid
+            // if we have a 200 OK for the RDF lets check if it is valid
 			if($results['rdf_uri_response_code'] == 200){			
-				$doc = new EasyRdf_Graph($response->info['redirect_url']);
+				$doc = new EasyRdf_Graph($results['rdf_uri']);
 				// $triplets = $doc->load($id,'rdfxml');
-				$triplets = $doc->load($response->info['redirect_url'],'rdfxml');
+				$triplets = $doc->load($results['rdf_uri'],'rdfxml');
 				if($triplets){
 					$results['rdf_triplets'] = $triplets;
 				}
