@@ -19,6 +19,7 @@ $watch_files = glob('conf/*.txt');
 // let's prepare a statement as we will use it each time
 $stmt = $mysqli->prepare("INSERT INTO monitor (`email`,`cetaf_id`, `html_response_code`, `html_uri`, `html_uri_response_code`, `rdf_response_code`, `rdf_uri`, `rdf_uri_response_code`, `rdf_triplets` ) VALUES (?,?,?,?,?,?,?,?,?)");
 
+// git test
 
 // test a random id from each watch
 foreach($watch_files as $file){
@@ -96,12 +97,15 @@ function test_id($email, $id, $stmt){
 			$results['rdf_uri_response_code'] = $response2->info['http_code'];			
                         
             // if we have a 200 OK for the RDF lets check if it is valid
-			if($results['rdf_uri_response_code'] == 200){			
-				$doc = new EasyRdf_Graph($results['rdf_uri']);
-				// $triplets = $doc->load($id,'rdfxml');
-				$triplets = $doc->load($results['rdf_uri'],'rdfxml');
-				if($triplets){
-					$results['rdf_triplets'] = $triplets;
+			if($results['rdf_uri_response_code'] == 200){
+				try{
+					$doc = new EasyRdf_Graph($results['rdf_uri']);
+					$triplets = $doc->load($results['rdf_uri'],'rdfxml');
+					if($triplets){
+						$results['rdf_triplets'] = $triplets;
+					}
+				}catch (Exception $e){
+					$results['rdf_triplets'] = 0;
 				}
 			}
 		
