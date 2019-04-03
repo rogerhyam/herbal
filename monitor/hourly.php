@@ -73,8 +73,7 @@ function test_id($email, $id, $stmt){
 	$curl = get_curl_handle($id);
     curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml" ));
     $response = run_curl_request($curl);
-	
-	
+		
 	if($response->error == 0){
 		
 		$results['rdf_response_code'] = $response->info['http_code'];
@@ -85,19 +84,23 @@ function test_id($email, $id, $stmt){
 			
 			// call for the actual RDF
 			$curl2 = get_curl_handle($results['rdf_uri']);
+			curl_setopt($curl2, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml" ));
 		    $response2 = run_curl_request($curl2);
+			$results['rdf_uri_response_code'] = $response2->info['http_code'];
+			
 			
 			// if we get another redirect do it again - because Paris does it and others might
 			if($response2->info['http_code'] == 303 || $response2->info['http_code'] == 302){
-				$curl2 = get_curl_handle($response2->info['redirect_url']);
-				$response2 = run_curl_request($curl2);
-				$results['rdf_uri'] = $response2->info['url'];
+				$curl3 = get_curl_handle($response2->info['redirect_url']);
+				curl_setopt($curl3, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml" ));
+				$response3 = run_curl_request($curl3);
+				$results['rdf_uri'] = $response3->info['url'];
+				$results['rdf_uri_response_code'] = $response3->info['http_code'];
 			}
-			
-			$results['rdf_uri_response_code'] = $response2->info['http_code'];			
+				
                         
             // if we have a 200 OK for the RDF lets check if it is valid
-			if($results['rdf_uri_response_code'] == 200){
+			if($results['rdf_uri_response_code'] == 200){				
 				try{
 					$doc = new EasyRdf_Graph($results['rdf_uri']);
 					$triplets = $doc->load($results['rdf_uri'],'rdfxml');
