@@ -2,4 +2,6 @@ vendor
 data
 ._*
 .DS_Store
+cron/token.json
+mailtest.php
 

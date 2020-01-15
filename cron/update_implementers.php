@@ -5,14 +5,15 @@
 	spreadsheet here
 	https://docs.google.com/spreadsheets/d/1vHl2xDghffm6HfQhVeruHV6ZAWAnrc-2LPasq0fOyF4/edit#gid=83189964
 	to rebuild the md/implementers.md page
+
+	git test
+
 */
 
 require_once('../config.php');
 
 require_once('../vendor/autoload.php');
-
-echo "Hello\n";
-
+		
 // Get the API client and construct the service object.
 $client = getClient();
 $service = new Google_Service_Sheets($client);
@@ -58,7 +59,6 @@ if (empty($values)) {
 }
 
 $out .= get_footer_text();
-
 
 file_put_contents('../md/implementers.md', $out);
 
