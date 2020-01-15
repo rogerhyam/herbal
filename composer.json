@@ -4,6 +4,7 @@
         "erusev/parsedown": "*",
 		"ml/json-ld": "*",
 		"phpmailer/phpmailer": "*",
-		"league/oauth2-google": "*"
+		"league/oauth2-google": "*",
+		"google/apiclient":"^2.0"
     }
 }
