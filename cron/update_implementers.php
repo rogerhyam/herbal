@@ -39,13 +39,13 @@ if (empty($values)) {
 		$out .= "## " . $row[0] . "\n";
 		for ($c=1; $c < count($row); $c++) {
 			if(strlen($row[$c]) < 1) continue;
-			$out .= "* __" . str_replace('_', ' ', $headers[$c]) . ":__ ";
+			$out .= "* __" . str_replace('_', ' ', trim($headers[$c])) . ":__ ";
 			
 			// if the value is a URL make it a link
 			if (filter_var($row[$c], FILTER_VALIDATE_URL)) {
-				$out .= '[' . $row[$c] .'](' . $row[$c] . ')';
+				$out .= '[' . trim($row[$c]) .'](' . trim($row[$c]) . ')';
 			} else {
-			    $out .= $row[$c];
+			    $out .= trim($row[$c]);
 			}
 			
 			$out .=  "\n";
@@ -53,8 +53,7 @@ if (empty($values)) {
 		
 		// finish entry
 		$out .= "\n";
-		
-		print_r($row);
+
     }
 }
 
@@ -140,7 +139,7 @@ function get_footer_text(){
 	$out = "The data on this page is updated approximately hourly from a [collaboratively maintained spreadsheet](https://docs.google.com/spreadsheets/d/1vHl2xDghffm6HfQhVeruHV6ZAWAnrc-2LPasq0fOyF4).
 If it hasn't updated or looks mangled please [contact Roger Hyam](/md.php?q=contact) and ask him to fix it.\n\n";
 
-	$out .= "Last synchronised: " . date("Y/m/d - h:i e");
+	$out .= "Last synchronised: " . date("Y/m/d - H:i e");
 	
 	$out .= "\n\n";
 

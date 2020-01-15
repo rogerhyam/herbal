@@ -115,8 +115,7 @@ so we can add it.
 * __Website:__ [http://www.mnhn.fr/](http://www.mnhn.fr/)
 * __DwC Institution Code:__ MNHN
 * __Collection Title:__ MNHN - Apterygota and springtails
-* __ID Example:__ http://coldb.mnhn.fr/catalognumber/mnhn/ea/ea021512
-
+* __ID Example:__ [http://coldb.mnhn.fr/catalognumber/mnhn/ea/ea021512](http://coldb.mnhn.fr/catalognumber/mnhn/ea/ea021512)
 * __Web Catalogue:__ [https://science.mnhn.fr/institution/mnhn/collection/ea/item/list](https://science.mnhn.fr/institution/mnhn/collection/ea/item/list)
 * __Redirect:__ yes
 * __RDF Compliance:__ yes
@@ -481,7 +480,7 @@ so we can add it.
 
 ## Natural History Museum, University of Oslo
 * __ID Fixed Part:__ [http://purl.org/nhmuio/id/](http://purl.org/nhmuio/id/)
-* __Website:__ https://www.nhm.uio.no/ 
+* __Website:__ https://www.nhm.uio.no/
 * __ID Example:__ [http://purl.org/nhmuio/id/41d9cbb4-4590-4265-8079-ca44d46d27c3](http://purl.org/nhmuio/id/41d9cbb4-4590-4265-8079-ca44d46d27c3)
 * __Web Catalogue:__ [http://nhmo-birds.collectionexplorer.org/](http://nhmo-birds.collectionexplorer.org/)
 * __Redirect:__ yes
@@ -492,5 +491,5 @@ so we can add it.
 The data on this page is updated approximately hourly from a [collaboratively maintained spreadsheet](https://docs.google.com/spreadsheets/d/1vHl2xDghffm6HfQhVeruHV6ZAWAnrc-2LPasq0fOyF4).
 If it hasn't updated or looks mangled please [contact Roger Hyam](/md.php?q=contact) and ask him to fix it.
 
-Last synchronised: 2020/01/15 - 08:47 UTC
+Last synchronised: 2020/01/15 - 23:10 UTC
 
