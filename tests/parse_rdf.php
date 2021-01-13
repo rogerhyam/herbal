@@ -3,7 +3,7 @@
     require_once('../cpss.php');
     require_once('../vendor/autoload.php');
     $specimen_uri = $_GET['specimen_uri'];	
-	$doc = new EasyRdf_Graph($_GET['rdf_uri']);
+	$doc = new EasyRdf\Graph($_GET['rdf_uri']);
     $doc->load($_GET['rdf_uri'],'rdfxml');
 
 	// now then...
@@ -19,7 +19,7 @@
 <h2>Parsing RDF</h2>
 
 <h3>CETAF Specimen Preview Profile</h3>
-<p>Prefered URI's are listed first followed by any depricated URIs that may contain the required values.</p>
+<p>Preferred URI's are listed first followed by any deprecated URIs that may contain the required values.</p>
 <table>
     <tr>
         <th>CSPP Element</th>

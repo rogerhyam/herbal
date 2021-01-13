@@ -54,7 +54,7 @@ class SpecimenRenderer{
         require_once('vendor/autoload.php');
         
         try{
-            $rdf_doc = new EasyRdf_Graph($this->uriCache->uri, $body);
+            $rdf_doc = new EasyRdf\Graph($this->uriCache->uri, $body);
         } catch (Exception $e) {
             return false;
         }

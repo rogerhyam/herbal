@@ -5,3 +5,4 @@ data
 cron/token.json
 mailtest.php
 
+composer.phar
