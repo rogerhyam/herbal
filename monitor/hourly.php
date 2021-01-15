@@ -102,7 +102,7 @@ function test_id($email, $id, $stmt){
             // if we have a 200 OK for the RDF lets check if it is valid
 			if($results['rdf_uri_response_code'] == 200){				
 				try{
-					$doc = new EasyRdf_Graph($results['rdf_uri']);
+					$doc = new EasyRdf\Graph($results['rdf_uri']);
 					$triplets = $doc->load($results['rdf_uri'],'rdfxml');
 					if($triplets){
 						$results['rdf_triplets'] = $triplets;
