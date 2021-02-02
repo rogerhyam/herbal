@@ -180,7 +180,7 @@ class UriDataCache{
              
              $curl = get_curl_handle($response->info['redirect_url']);
              curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: text/html"));
-             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // extra redirects for Paris!
+             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // extra redirects 
              $response = run_curl_request($curl);
              if($response->info['http_code'] == 200){
                 $template['log'] .= "Response code: 200.\n";

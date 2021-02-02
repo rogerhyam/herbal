@@ -71,7 +71,8 @@ function test_id($email, $id, $stmt){
 	// call for RDF
 	$results['rdf_triplets'] = 0;
 	$curl = get_curl_handle($id);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml" ));
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array( "Accept: application/rdf+xml" ));
+	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // extra redirects 
     $response = run_curl_request($curl);
 		
 	if($response->error == 0){
