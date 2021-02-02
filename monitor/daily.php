@@ -31,7 +31,17 @@ function send_report($email){
 	
 	$OK = true;
 	foreach($rows as $row){
-		if($row['html_response_code'] != 303) $OK = false;
+		switch ($row['html_response_code']) {
+			case 303:
+				$OK = true;
+			break;
+			case 302:
+				$OK = true;
+				break;
+			default:
+				$OK = false;
+				break;
+		}
 		if(!$row['rdf_triplets']) $OK = false;
 	}
 	
@@ -51,7 +61,7 @@ function send_report($email){
 	
 		foreach($rows as $row){
 		
-			if($row['html_response_code'] != 303 || !$row['rdf_triplets']){
+			if( !($row['html_response_code'] == 302 || $row['html_response_code'] == 303) || !$row['rdf_triplets']){
 				$bgcolour = 'pink'; 
 			}else{
 				$bgcolour = 'white';
