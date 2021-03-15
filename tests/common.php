@@ -24,10 +24,11 @@ function run_curl_request($curl){
    $out['response'] = curl_exec($curl);
    
    $out['error'] = curl_errno($curl);
+
+    $out['info'] = curl_getinfo($curl);
    
     if(!$out['error']){
         // no error
-        $out['info'] = curl_getinfo($curl);
         $out['headers'] = get_headers_from_curl_response($out);
         $out['body'] = trim(substr($out['response'], $out['info']["header_size"]));
 
@@ -39,6 +40,9 @@ function run_curl_request($curl){
     // we close it down after it has been run
     curl_close($curl);
     
+
+   print_r($out);
+
     return (object)$out;
     
 }

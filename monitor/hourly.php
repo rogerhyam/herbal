@@ -23,7 +23,7 @@ $stmt = $mysqli->prepare("INSERT INTO monitor (`email`,`cetaf_id`, `html_respons
 
 // test a random id from each watch
 foreach($watch_files as $file){
-	$lines = file($file);	
+	$lines = file($file);
 	$email = trim(array_shift($lines));
 	$id = trim($lines[array_rand($lines, 1)]);
 	test_id($email, $id, $stmt);
@@ -140,7 +140,7 @@ function get_response_code($uri){
 	if($response->error == 0){
 		return $response->info['http_code'];
 	}else{
-		return $response['error'];
+		return $response->error;
 	}
 }
 
