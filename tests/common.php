@@ -40,9 +40,6 @@ function run_curl_request($curl){
     // we close it down after it has been run
     curl_close($curl);
     
-
-   print_r($out);
-
     return (object)$out;
     
 }
