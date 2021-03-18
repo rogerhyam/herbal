@@ -45,7 +45,7 @@ if($go_to_next){
 <script type="text/javascript">
     $('#parse-rdf-results').html('Loading ...');
     $('#parse-rdf-results').show('slow');
-    $('#parse-rdf-results').load('tests/parse_rdf.php', 'rdf_uri=' + '<?php echo $rdfUri ?>' + '&specimen_uri=' + '<?php echo $uri ?>' );
+    $('#parse-rdf-results').load('tests/parse_rdf.php', 'rdf_uri=' + '<?php echo urlencode( $rdfUri ) ?>' + '&specimen_uri=' + '<?php echo $uri ?>' );
 </script>
 <?php
 } // end go_to_next
