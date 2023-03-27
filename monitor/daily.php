@@ -38,6 +38,9 @@ function send_report($email){
 			case 302:
 				$OK = true;
 				break;
+			case 307:
+				$OK = true;
+				break;
 			default:
 				$OK = false;
 				break;

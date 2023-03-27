@@ -51,7 +51,7 @@ function test_id($email, $id, $stmt){
 	
 		$results['html_response_code'] = $response->info['http_code'];
 
-		if($results['html_response_code'] == 303 || $results['html_response_code'] == 302){
+		if($results['html_response_code'] == 303 || $results['html_response_code'] == 302 ){
 			$results['html_uri'] = $response->info['redirect_url'];
 			$results['html_uri_response_code'] = get_response_code($response->info['redirect_url']);
 				
@@ -78,7 +78,7 @@ function test_id($email, $id, $stmt){
 		
 		$results['rdf_response_code'] = $response->info['http_code'];
 
-		if($results['rdf_response_code'] == 303 || $results['rdf_response_code'] == 302){
+		if($results['rdf_response_code'] == 303 || $results['rdf_response_code'] == 302 ){
 			
 			$results['rdf_uri'] = $response->info['redirect_url'];
 			

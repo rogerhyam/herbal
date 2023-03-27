@@ -34,6 +34,15 @@
             $go_to_next = true; 
             break;
 
+        case 307:
+            echo_ok("Received 307 Redirect HTTP code.");
+            echo_warning("Received 307 Redirect HTTP code. This should really be a 303 as the meaning of 307 is wrong but we'll let it pass for now.");
+            echo_ok("Redirect to URI: <a target=\"_new\" href=\"". $response->info['redirect_url'] ."\">" . $response->info['redirect_url']  . "</a>");
+            echo_info("Had 307 redirect so will reluctantly request RDF data for parsing.");
+            $rdfUri = $response->info['redirect_url'];
+            $go_to_next = true; 
+            break;
+
         default:
             echo_error("Unexpected response code: '". $response->info['http_code'] ."'. Expecting 303 Redirect to RDF.");
             $go_to_next = true; 

@@ -57,7 +57,7 @@ Currently implementers tend to use a catalogue number or barcode number at the e
 
 ### Level 2
 
-The response to resolving the URI is an HTTP 303 redirect to another resource.
+The response to resolving the URI is an HTTP 303 (or 307) redirect to another resource.
 The resouce redirected to depends on the Accept header given in the request. Typically
 it defaults to the web page as in Level 1.
 This keeps the implementation transparent to a human user but if a machine sets the
@@ -77,6 +77,8 @@ As an example, if someone were to assert dc:created for the URI without the 303 
 if they were telling us when the HTML page, the RDF data or the specimen was created.
 We need to be able to clearly differentiate between these things and hence
 the 303 redirect is required for level 2 conformance.
+
+(For PURL compatibility reasons 302 and 307 requests are also followed although the meaning of these requests is different.)
 
 ### Level 3
 

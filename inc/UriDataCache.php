@@ -215,7 +215,7 @@ class UriDataCache{
         }
         
         // follow the redirect to get the data
-        if($response_code == 303 || $response_code == 302){
+        if($response_code == 303 || $response_code == 302 ){
              
              $template['log'] .= "Calling: ".  $response->info['redirect_url'] .".\n";
              
