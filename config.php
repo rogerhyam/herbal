@@ -1,5 +1,8 @@
 <?php
 
+// easy RDF is giving deprecation warnings
+error_reporting(E_ALL & ~E_DEPRECATED);
+
 require '/var/herbal_secure.php';
 
 date_default_timezone_set('UTC');
